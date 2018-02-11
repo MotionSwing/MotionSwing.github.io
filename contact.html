@@ -2,11 +2,11 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Jon White - About</title>
+	<title>Jon White - Contact</title>
 	<link rel="stylesheet" href="assets/css/reset.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/site_style.css">
-	<link rel="stylesheet" href="assets/css/index_style.css">
+	<link rel="stylesheet" href="assets/css/contact_style.css">
 
 </head>
 <body>
@@ -26,16 +26,24 @@
 
 		<section class="primary-content">
 			<article>
-				<h2>About Me</h2>
+				<h2>Contact</h2>
 				<hr />
-				<div class="profile-img">
-					<img src="assets/images/profile.jpg">
-				</div>
-				<p>This is me sipping out of a coconut in the Philippines. I enjoy traveling, drawing and coding. I'm determined to improve my skills in web design so that I can build fully interactive dynamic web applications with ease.</p>
-				<br />
-				<p>I want to be a part of the push towards automation so that we can focus more time and attention to the things that truly matter. I've been programming on and off in Java and Visual Basic for the better part of 15 years now, mostly as just a hobbyist. The world of coding has greatly changed since I first started (back when frames were more prevalent than CSS).</p>
-				<br />
-				<p>I'm looking forward to learning more and eventually working as a freelance full-stack developer.</p>		
+				<form class="contact-form">
+					<!-- Name -->
+					<label for="submitter-name" class="form-label">Name</label>
+					<input id="submitter-name" type="text" placeholder="John Smith" name="submitter-name">
+
+					<!-- Email -->
+					<label for="submitter-email" class="form-label">Email</label>
+					<input id="submitter-email" type="email" placeholder="example@gmail.com" name="submitter-email">
+
+					<!-- Message -->
+					<label for="submitter-message" class="form-label">Message</label>
+					<textarea id="submitter-message" cols="30" rows="10" name="submitter-message"></textarea>
+
+					<!-- Submit Button -->
+					<a id="send-btn" class="btn" href="#" target="_blank">Submit</a>
+				</form>
 			</article>
 			<aside>
 				<h3>Connect with Me</h3>
@@ -43,7 +51,7 @@
 				<ul class="flex-icons">
 					<li>
 						<a href="https://github.com/MotionSwing">
-							<img class="shadow" src="assets/images/github-128.png">
+							<img src="assets/images/github-128.png">
 						</a>
 					</li>
 					<li>
@@ -59,7 +67,7 @@
 				</ul>
 			</aside>
 		</section>
-		<footer>&copy; Copyright 2018 Jonathan White</footer>
+		<footer><p>&copy; Copyright 2018 Jonathan White</p></footer>
 	</div>
 
 
