@@ -1,37 +1,75 @@
-.profile-img {
-	position: relative;
-	overflow: hidden;
-	animation: clear_overflow 1s forwards;
+/* Section & Aside dimension tooltip */
+.container-fluid .card:nth-child(1)::before,
+.container-fluid .card:nth-child(2)::before {
+	content: '';
+	position: absolute;
+	top: -12px;
+	left: 0;
+	width: 100%;
+	height: 7px;
+	border: 2px solid #666;
+	border-bottom: 0;
+	opacity: 0;
 }
 
-.primary-content article img {
-	position: relative;
-	top: -450px;
-	animation: dropdown 1s linear forwards;
+.container-fluid .card:nth-child(1)::before{
+	animation: flash 3s forwards;
 }
 
-@keyframes clear_overflow {
-	99.999% { overflow: hidden;	}
-	100% { overflow: initial; }
+.container-fluid .card:nth-child(2)::before {
+	animation: flash 3s 3.5s forwards;
 }
 
-@keyframes dropdown {
-	100% {
-		opacity: 1;
-		top: 0;
+.container-fluid .card:nth-child(1)::after,
+.container-fluid .card:nth-child(2)::after {
+	position: absolute;
+	top: -12px;
+	left: 50%;
+	background-color: #ccc;
+	border: 2px solid #666;
+	text-align: center;
+	padding: 0 10px;
+	font-size: 10px;
+	transform: translate(-50%, -50%);
+	border-radius: 5px;
+	color: #000;
+	opacity: 0;
+}
+
+.container-fluid .card:nth-child(1)::after {
+	content: '2/3 of the grid';
+	animation: flash 3s 500ms forwards;
+}
+
+.container-fluid .card:nth-child(2)::after {
+	content: '1/3 of the grid';
+	animation: flash 3s 4s forwards;
+}
+
+@keyframes flash {
+	0% { opacity: 0; }
+	20% { opacity: 1; }
+	80% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@media screen and (min-width: 576px){
+	.container-fluid .card:nth-child(1)::after,
+	.container-fluid .card:nth-child(2)::after {
+		content: 'entire grid';
 	}
 }
 
-@media screen and (max-width: 768px) {
-	.primary-content article img {
-		width: 50%;
-		float: left;
-		margin-right: 25px;
+@media screen and (min-width: 768px){
+	.container-fluid .card:nth-child(1)::after {
+		content: '2/3 of the grid';
 	}
-}
 
-@media screen and (max-width: 640px) {
-	.primary-content article img {
-		width: 100%;
+	.container-fluid .card:nth-child(2)::after {
+		content: '1/3 of the grid';
+	}
+
+	#toggle {
+		display: block;
 	}
 }

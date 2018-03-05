@@ -1,67 +1,97 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Jon White - About</title>
+
+	<!-- Styles -->
 	<link rel="stylesheet" href="assets/css/reset.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/site_style.css">
-	<link rel="stylesheet" href="assets/css/index_style.css">
-
+	<!-- <link rel="stylesheet" href="assets/css/index_style.css"> -->
 </head>
 <body>
-	<div class="container">
-		<section class="primary-header">
-			<header>
-				<a href="index.html">
-					<h1 class="name-tag">Jon White</h1>
-				</a>
-				<ul>
-					<li class="menuitem-1"><a class="page-link" href="index.html">About</a></li>
-					<li class="menuitem-2"><a class="page-link" href="portfolio.html">Portfolio</a></li>
-					<li class="menuitem-3"><a class="page-link" href="contact.html">Contact</a></li>
-				</ul>
-			</header>			
-		</section>
+	<nav class="navbar navbar-expand-lg navbar-light bg-white border mb-3 p-0">
+		<div class="container">
+		  <a class="navbar-brand text-primary p-0" href="index.html">
+		  	<h4 class="text-white font-weight-bold p-3 m-0">Jon White</h4>
+		  </a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
 
-		<section class="primary-content">
-			<article>
-				<h2>About Me</h2>
-				<hr />
-				<div class="profile-img">
-					<img src="assets/images/profile.jpg">
-				</div>
-				<p>This is me sipping out of a coconut in the Philippines. I enjoy traveling, drawing and coding. I'm determined to improve my skills in web design so that I can build fully interactive dynamic web applications with ease.</p>
-				<br />
-				<p>I want to be a part of the push towards automation so that we can focus more time and attention to the things that truly matter. I've been programming on and off in Java and Visual Basic for the better part of 15 years now, mostly as just a hobbyist. The world of coding has greatly changed since I first started (back when frames were more prevalent than CSS).</p>
-				<br />
-				<p>I'm looking forward to learning more and eventually working as a freelance full-stack developer.</p>		
-			</article>
-			<aside>
-				<h3>Connect with Me</h3>
-				<hr />
-				<ul class="flex-icons">
-					<li>
-						<a href="https://github.com/MotionSwing">
-							<img class="shadow" src="assets/images/github-128.png">
-						</a>
-					</li>
-					<li>
-						<a href="https://www.linkedin.com/in/jonathan-white-ba4a2761/">
-							<img src="assets/images/linkedin-128.png">
-						</a>
-					</li>
-					<li>
-						<a href="https://stackoverflow.com/users/2203530/jon-white?tab=profile">
-							<img src="assets/images/stackoverflow-128.png">
-						</a>
-					</li>
-				</ul>
-			</aside>
-		</section>
-		<footer>&copy; Copyright 2018 Jonathan White</footer>
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav ml-auto">
+		      <li class="nav-item ml-4 ml-md-0 pt-2 active">
+		        <a class="nav-link pb-0 pt-0" href="index.html">About <span class="sr-only">(current)</span></a>
+		      </li>
+		      <li class="nav-item ml-4 ml-md-0 pt-2">
+		        <a class="nav-link pb-0 pt-0" href="portfolio.html">Portfolio</a>
+		      </li>
+		      <li class="nav-item ml-4 ml-md-0 pt-2">
+		        <a class="nav-link pb-0 pt-0" href="contact.html">Contact</a>
+		      </li>
+		    </ul>
+		  </div>				
+		</div>
+	</nav>
+
+	<div class="container position-relative">
+		<div class="container-fluid mb-5">
+			<div class="row">
+			    <div class="card col-md-7 p-2 mb-sm-4 position-relative">
+			    	<div class="card-header bg-white">
+			    		<h5 class="card-title font-weight-bold m-md-0">About Me</h5>
+			    	</div>
+					<div class="card-body">
+						<div class="profile-img">
+							<img class="img-fluid w-50 float-left mr-3" src="assets/images/profile.jpg" title="Sipping on some coconut" alt="Jon White drinking out of a coconut" />
+						</div>
+						<p>This is me sipping out of a coconut in the <span class="blaze">Philippines</span>. I enjoy traveling, drawing and coding. I'm determined to improve my skills in web design so that I can build fully <span class="blaze">interactive</span> dynamic web applications with ease.</p>
+						<br />
+						<p>I want to be a part of the push towards automation so that we can focus more time and attention to the things that truly matter. I've been programming on and off in <span class="blaze">Java</span> and <span class="blaze">Visual Basic</span> for the better part of 15 years now, mostly as just a hobbyist. The world of coding has greatly changed since I first started (back when frames were more prevalent than CSS).</p>
+						<br />
+						<p>I'm looking forward to learning more and eventually working as a freelance full-stack developer.</p>	
+					</div>
+			    </div>
+			    <div class="card col-md-4 ml-auto p-2 h-25 mb-sm-4">
+			    	<div class="card-header bg-white">
+			    		<h5 class="card-title font-weight-bold m-md-0">Connect with Me</h5>
+			    	</div>
+			    	<div class="card-body">
+						<div class="row">
+						    <div class="col-md-4 p-2 w-25 github">
+						      	<a href="https://github.com/MotionSwing" title="Fork me on GitHub" target="_blank">
+									<img class="w-100" src="assets/images/github-128.png" alt="GitHub">
+								</a>
+						    </div>
+						    <div class="col-md-4 p-2 w-25 linkedin">
+							    <a href="https://www.linkedin.com/in/jonathan-white-ba4a2761/" title="Connect with me on Linkedin" target="_blank">
+							    	<div id="metroid">
+							    		<div></div>
+							    	</div>
+									<img class="w-100" src="assets/images/linkedin-128.png" alt="Linkedin">
+								</a>
+						    </div>
+						    <div class="col-md-4 p-2 w-25 stackoverflow">
+						    	<a href="https://stackoverflow.com/users/2203530/jon-white?tab=profile" title="Answer my questions on StackOverflow" target="_blank">
+									<img class="w-100" src="assets/images/stackoverflow-128.png" alt="StackOverflow">
+								</a>
+						    </div>
+						</div>
+			    	</div>
+			    </div>
+			</div>
+		</div>
+		<footer class="row fixed-bottom p-sm-2 p-md-3">
+			<p class="text-center col-md-12 mb-0">&copy; Copyright 2018 Jon White</p>
+		</footer>
+		<div id="toggle">Toggle</div>
 	</div>
 
-
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="assets/js/script.js"></script>
 </body>
 </html>

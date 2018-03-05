@@ -1,75 +1,135 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Jon White - Contact</title>
+
+	<!-- Styles -->
 	<link rel="stylesheet" href="assets/css/reset.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/site_style.css">
 	<link rel="stylesheet" href="assets/css/contact_style.css">
 
 </head>
 <body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-white border mb-3 p-0">
+		<div class="container">
+		  <a class="navbar-brand text-primary p-0" href="index.html">
+		  	<h4 class="text-white font-weight-bold p-3 m-0">Jon White</h4>
+		  </a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav ml-auto">
+		      <li class="nav-item ml-4 ml-md-0 pt-2">
+		        <a class="nav-link pb-0 pt-0" href="index.html">About</a>
+		      </li>
+		      <li class="nav-item ml-4 ml-md-0 pt-2">
+		        <a class="nav-link pb-0 pt-0" href="portfolio.html">Portfolio</a>
+		      </li>
+		      <li class="nav-item ml-4 ml-md-0 pt-2 active">
+		        <a class="nav-link pb-0 pt-0" href="contact.html">Contact <span class="sr-only">(current)</span></a>
+		      </li>
+		    </ul>
+		  </div>				
+		</div>
+	</nav>
+
 	<div class="container">
-		<section class="primary-header">
-			<header>
-				<a href="index.html">
-					<h1 class="name-tag">Jon White</h1>
-				</a>
-				<ul>
-					<li class="menuitem-1"><a class="page-link" href="index.html">About</a></li>
-					<li class="menuitem-2"><a class="page-link" href="portfolio.html">Portfolio</a></li>
-					<li class="menuitem-3"><a class="page-link" href="contact.html">Contact</a></li>
-				</ul>
-			</header>			
-		</section>
+		<div class="container-fluid mb-5">
+			<div class="row">
+			    <div class="card col-md-7 p-2 mb-sm-3 mb-md-4">
+			    	<div class="card-header bg-white">
+			    		<h5 class="card-title font-weight-bold m-0">Contact</h5>
+			    	</div>
+					<div class="card-body">
+						<form>
+							<div class="input-group mb-3">
+							  <div class="input-group-prepend">
+							    <span class="input-group-text" id="basic-addon1">Name</span>
+							  </div>
+							  <input id="submitter" type="text" class="form-control" placeholder="John Smith" aria-label="Name" aria-describedby="basic-addon1">
+							</div>
+							<div class="input-group mb-3">
+							  <div class="input-group-prepend">
+							    <span class="input-group-text" id="basic-addon2">Email</span>
+							  </div>
+							  <input id="email" type="email" class="form-control" placeholder="example@gmail.com" aria-label="Name" aria-describedby="basic-addon1">
+							</div>
+							<div class="input-group mb-3">
+							  <div class="input-group-prepend">
+							    <span class="input-group-text">Message</span>
+							  </div>
+							  <textarea id="message" class="form-control" aria-label="With textarea" rows="5"></textarea>
+							</div>
 
-		<section class="primary-content">
-			<article>
-				<h2>Contact</h2>
-				<hr />
-				<form class="contact-form">
-					<!-- Name -->
-					<label for="submitter-name" class="form-label">Name</label>
-					<input id="submitter-name" type="text" placeholder="John Smith" name="submitter-name">
+							<!-- Button trigger modal -->
+							<button type="button" class="btn btn-primary  mb-3" data-toggle="modal" data-target="#ModalLong" onclick="modal_click();">Submit</button>
+						</form>
 
-					<!-- Email -->
-					<label for="submitter-email" class="form-label">Email</label>
-					<input id="submitter-email" type="email" placeholder="example@gmail.com" name="submitter-email">
+						<!-- Modal -->
+						<div class="modal fade" id="ModalLong" tabindex="-1" role="dialog" aria-labelledby="ModalLongTitle" aria-hidden="true">
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h5 class="modal-title" id="ModalLongTitle">Thank you!</h5>
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						          <span aria-hidden="true">&times;</span>
+						        </button>
+						      </div>
+						      <div class="modal-body">
+						        Message Submitted.
+						      </div>
+						      <div class="modal-footer">
+						      	<p class="text-muted">This is an example only. No message has been submitted.</p>
+						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+					</div>	
+			    </div>
+			    <div class="card col-md-4 ml-auto p-2 h-25 mb-sm-4">
+			    	<div class="card-header bg-white">
+			    		<h5 class="card-title font-weight-bold m-0">Connect with Me</h5>
+			    	</div>
+			    	<div class="card-body">
+						<div class="row">
+						    <div class="col-md-4 p-2 w-25 github">
+						      	<a href="https://github.com/MotionSwing" title="Fork me on GitHub" target="_blank">
+									<img class="w-100" src="assets/images/github-128.png" alt="GitHub">
+								</a>
+						    </div>
+						    <div class="col-md-4 p-2 w-25 linkedin">
+							    <a href="https://www.linkedin.com/in/jonathan-white-ba4a2761/" title="Connect with me on Linkedin" target="_blank">
+							    	<div id="metroid">
+							    		<div></div>
+							    	</div>
+									<img class="w-100" src="assets/images/linkedin-128.png" alt="Linkedin">
+								</a>
+						    </div>
+						    <div class="col-md-4 p-2 w-25 stackoverflow">
+						    	<a href="https://stackoverflow.com/users/2203530/jon-white?tab=profile" title="Answer my questions on StackOverflow" target="_blank">
+									<img class="w-100" src="assets/images/stackoverflow-128.png" alt="StackOverflow">
+								</a>
+						    </div>
+						</div>
+			    	</div>
+			    </div>
+			</div>
+		</div>
 
-					<!-- Message -->
-					<label for="submitter-message" class="form-label">Message</label>
-					<textarea id="submitter-message" cols="30" rows="10" name="submitter-message"></textarea>
-
-					<!-- Submit Button -->
-					<a id="send-btn" class="btn" href="#" target="_blank">Submit</a>
-				</form>
-			</article>
-			<aside>
-				<h3>Connect with Me</h3>
-				<hr />
-				<ul class="flex-icons">
-					<li>
-						<a href="https://github.com/MotionSwing">
-							<img src="assets/images/github-128.png">
-						</a>
-					</li>
-					<li>
-						<a href="https://www.linkedin.com/in/jonathan-white-ba4a2761/">
-							<img src="assets/images/linkedin-128.png">
-						</a>
-					</li>
-					<li>
-						<a href="https://stackoverflow.com/users/2203530/jon-white?tab=profile">
-							<img src="assets/images/stackoverflow-128.png">
-						</a>
-					</li>
-				</ul>
-			</aside>
-		</section>
-		<footer><p>&copy; Copyright 2018 Jonathan White</p></footer>
+		<footer class="row fixed-bottom p-sm-2 p-md-3">
+			<p class="text-center col-md-12 mb-0">&copy; Copyright 2018 Jon White</p>
+		</footer>
+		<div id="toggle">Toggle</div>
 	</div>
 
-
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="assets/js/script.js"></script>
 </body>
 </html>
