@@ -1,2 +1,3 @@
-# MotionSwing.github.io
-My Site 2
+# Welcome!
+
+Check out my bio and portfolio.
