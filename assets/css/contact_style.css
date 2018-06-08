@@ -5,3 +5,8 @@ form button {
 .input-group>.input-group-prepend>.input-group-text {
 	min-width: 91px;
 }
+
+.thankyou {
+	text-align: center;
+    font-size: 30px;
+}

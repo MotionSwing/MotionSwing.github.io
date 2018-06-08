@@ -1,13 +1,17 @@
-$(window).on('load', function() {
-	$('#toggle').on('click', function() {
-		$('.container-fluid .card:nth-child(1)').toggleClass('col-md-8');
-	});
-});
+function sendMail(){
+	const submitter = $('#submitter').val().trim();
+	const body = encodeURIComponent(`Hi Jonathan, 
 
+	${$("#message").val().trim()}
 
-function modal_click() {
-	var submitter = $('#submitter').val();
-	var message = $('#message').val();
-	$('#ModalLongTitle').text('Thank you '  + submitter + '!');
-	$('#ModalLong .modal-body').text('Your message: "' + message + '"');
-}
+	Regards,
+	${submitter}
+	`);
+	const subject = encodeURIComponent('Message for Jonathan White');
+	const message = `mailto:jon.white2@gmail.com?subject=${subject}&body=${body}`;
+	window.open(message);
+
+	const thanks = $("<p>").text('Thank you!');
+	$("#form-wrapper").empty().addClass('thankyou').append(thanks);
+};
+
